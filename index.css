@@ -793,13 +793,67 @@ h6 {
   }
 
   .hero {
-    flex-direction: column;
-    text-align: center;
-    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    animation: fadeIn 1s ease-in-out;
   }
 
   .hero-content {
-    order: 2;
+    max-width: 600px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: slideIn 1s ease-in-out;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    animation: slideIn 1.2s ease-in-out;
+  }
+
+  .hero-cta .btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .hero-cta .primary-btn:hover {
+    background-color: var(--primary-color-hover);
+    transform: scale(1.05);
+  }
+
+  .hero-cta .secondary-btn:hover {
+    background-color: var(--secondary-color-hover);
+    transform: scale(1.05);
+  }
+
+  .hero-social .social-link {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  .hero-social .social-link:hover {
+    transform: scale(1.2);
+  }
+
+  .hero-image .floating {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
   }
 
   .hero-image {
